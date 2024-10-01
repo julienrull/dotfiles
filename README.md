@@ -1,5 +1,7 @@
 # Dotfiles
 
+![alt text](https://github.com/julienrull/dotfiles/blob/master/showcase.png?raw=true)
+
 ## Components
 
 - os: **archlinux**
@@ -23,5 +25,3 @@
 - xorg 
 - xorg-xinit
 - xdg-utils
-
-![alt text](https://github.com/julienrull/dotfiles/blob/master/showcase.png?raw=true)
