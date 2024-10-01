@@ -1,5 +1,4 @@
 -- Set leader key
-vim.cmd([[colorscheme neogotham]])
 vim.cmd("let mapleader = \" \"")
 -- enable color themes
 vim.cmd("set t_Co=256")
@@ -8,6 +7,9 @@ vim.o.background = "dark" -- or "light" for light mode
 -- enable true colors support
 vim.cmd("set termguicolors")
 vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
+
+vim.o.background = "dark" -- or "light" for light mode
+vim.cmd([[colorscheme gruvbox]])
 
 
 -- Plugin settings 

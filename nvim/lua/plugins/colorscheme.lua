@@ -1,4 +1,1 @@
-return {  'shmerl/neogotham',
-      lazy = false, -- to make sure it's loaded on startup
-      priority = 1000, -- to load before other plugins
-}
+return { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true}
