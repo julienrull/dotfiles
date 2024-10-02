@@ -2,6 +2,8 @@
 
 ![alt text](https://github.com/julienrull/dotfiles/blob/master/showcase.png?raw=true)
 
+![alt text](https://github.com/julienrull/dotfiles/blob/master/showcase2.png?raw=true)
+
 ## Features
 
 |       Type        |      Name               |
