@@ -16,5 +16,5 @@
 | bar               | **dwmblocks**           |
 | wallpaper         | **feh**                 |
 | audio             | **pulseaudio**          |
-| bluetooth         | **bluez/bluez-utils**   |
+| bluetooth         | **bluez**               |
 | ~display manager~ | ------------------------|
