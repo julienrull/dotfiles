@@ -65,6 +65,8 @@ static const char *termcmd[]  = { "alacritty", NULL };
 
 static const char *flameshot[] = { "flameshot", "gui", NULL };
 
+static const char *boomer[] = { "boomer", NULL };
+
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -100,7 +102,8 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_underscore,             7)
 	TAGKEYS(                        XK_ccedilla,               8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-    { 0,                            XK_Print,  spawn,          {.v = flameshot} },
+    { MODKEY,                       XK_s,  spawn,          {.v = flameshot} },
+    { MODKEY|ShiftMask,             XK_s,  spawn,          {.v = boomer} },
 };
 
 /* button definitions */

@@ -5,4 +5,5 @@ xset r rate 200 25
 xrandr --output DP-1 --primary --mode 3840x2160 --output eDP-1 --off
 feh --bg-fill ~/Git/dotfiles/wp.png
 dwmblocks &
-exec dwm
+pipewire &
+dbus-run-session dwm 2> ~/.dwm.log

@@ -1,4 +1,4 @@
-shell="/bin/bash"
+shell="/bin/zsh"
 live_config_reload = true
 [window]
 opacity=1.0

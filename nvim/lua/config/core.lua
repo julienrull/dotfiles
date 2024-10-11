@@ -20,7 +20,7 @@ vim.cmd("map <leader>n :bnext<cr>")
 vim.cmd("map <leader>p :bprevious<cr>")
 vim.cmd("map <leader>d :bdelete<cr>")
 -- Telescope
-vim.cmd("nnoremap <leader>ff <cmd>Telescope find_files<cr>")
+vim.cmd("nnoremap <leader>ff <cmd>Telescope find_files hidden=true<cr>")
 vim.cmd("nnoremap <leader>fg <cmd>Telescope live_grep<cr>")
 vim.cmd("nnoremap <leader>fb <cmd>Telescope buffers<cr>")
 vim.cmd("nnoremap <leader>fh <cmd>Telescope help_tags<cr>")
