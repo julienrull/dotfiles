@@ -7,6 +7,7 @@ yes | cp -rf ~/.config/nvim ~/Git/dotfiles
 
 # X11
 yes | cp -rf ~/.xinitrc ~/Git/dotfiles
+yes | cp -rf ~/startdwm.sh ~/Git/dotfiles
 yes | cp -rf ~/.Xresources ~/Git/dotfiles
 
 # ALACRITTY
