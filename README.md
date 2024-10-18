@@ -8,15 +8,18 @@
 
 |       Type        |      Name               |
 |-------------------|:-----------------------:|
-| os                | **archlinux**           |
-| package           | **yay**                 |
+| os                | **voidlinux**           |
+| package           | **xbps**                |
 | editor            | **neovim**              |
 | terminal          | **alacritty**           |
 | display server    | **xorg**                |
 | compositor        | **picom**               |
 | window manager    | **dwm**                 |
 | bar               | **dwmblocks**           |
+| dmenu             | **dmenu**               |
+| display locker    | **slock**               |
+| clipboard         | **xsel**                |
 | wallpaper         | **feh**                 |
-| audio             | **pulseaudio**          |
+| audio             | **pipewire**            |
 | bluetooth         | **bluez**               |
-| ~display manager~ | ------------------------|
+| ~display manager~ | 💨                      |

@@ -15,6 +15,7 @@ static const char col_cyan[]        = "#cc241d";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+	//[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 	[SchemeSel]  = { col_gray4, col_gray2,  col_gray1  },
 };
 /* tagging */
@@ -67,6 +68,8 @@ static const char *flameshot[] = { "flameshot", "gui", NULL };
 
 static const char *boomer[] = { "boomer", NULL };
 
+static const char *slock[] = { "slock", NULL };
+
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -104,6 +107,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
     { MODKEY,                       XK_s,  spawn,          {.v = flameshot} },
     { MODKEY|ShiftMask,             XK_s,  spawn,          {.v = boomer} },
+    { MODKEY|ShiftMask,             XK_d,  spawn,          {.v = slock} },
 };
 
 /* button definitions */
