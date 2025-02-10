@@ -1,0 +1,37 @@
+require("config.lazy")
+require("config.core")
+require("config.autoclose")
+require("config.oil")
+require("config.transparent")
+require("config.lualine")
+require("config.treesitter")
+require("config.cmp")
+require("config.mason")
+
+guifontsize=20
+
+function AdjustFontSize(amount)
+    guifontsize = guifontsize + amount
+    vim.o.guifont = "JetBrainsMono Nerd Font:h"..guifontsize..":b"
+end
+
+if vim.g.neovide then
+    -- Put anything you want to happen only in Neovide here
+    vim.o.guifont = "JetBrainsMono Nerd Font:h"..guifontsize..":b"
+    vim.g.neovide_padding_top = 0
+    vim.g.neovide_padding_bottom = 0
+    vim.g.neovide_padding_right = 0
+    vim.g.neovide_padding_left = 0
+
+    vim.keymap.set('n', '<D-s>', ':w<CR>') -- Save
+    vim.keymap.set('v', '<leader>fc', '"+y')    -- Copy
+    vim.keymap.set('n', '<leader>fv', '"+P')    -- Paste normal mode
+    vim.keymap.set('v', '<C-v>', '"+P')    -- Paste visual mode
+    vim.keymap.set('c', '<C-v>', '<C-R>+') -- Paste command mode
+    vim.keymap.set('i', '<C-v>', '<C-R>+') -- Paste insert mode
+
+    vim.api.nvim_set_keymap("n", '<C-=>', "<cmd>lua AdjustFontSize(1)<CR>", {noremap=true}) -- Paste insert mode
+    vim.api.nvim_set_keymap("n", '<C-->', "<cmd>lua AdjustFontSize(-1)<CR>", {noremap=true}) -- Paste insert mode
+end
+
+

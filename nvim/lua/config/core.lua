@@ -9,8 +9,15 @@ vim.cmd("set termguicolors")
 vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
 
 vim.o.background = "dark" -- or "light" for light mode
-vim.cmd([[colorscheme gruvbox]])
+--vim.cmd.colorscheme("kanagawa-dragon")
+vim.cmd.colorscheme("kanagawa-wave")
 
+vim.cmd [[
+  highlight Normal guibg=none
+  highlight NonText guibg=none
+  highlight Normal ctermbg=none
+  highlight NonText ctermbg=none
+]]
 
 -- Plugin settings 
 -- vim airline
