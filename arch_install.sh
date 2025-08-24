@@ -5,7 +5,7 @@
 sudo pacman -Syyu
 
 # Install system dependencies
-sudo pacman -Sy base-devel dbus xorg xorg-xinit xdg-desktop-portal xdg-desktop-portal-gtk pipewire pipewire-pulse pavucontrol wireplumber bluez blueman picom dunst rofi neovim zsh fastfetch wezterm openrgb yazi feh curl wget
+sudo pacman -Sy base-devel dbus xorg xorg-xinit xdg-desktop-portal xdg-desktop-portal-gtk pipewire pipewire-pulse pavucontrol wireplumber bluez blueman picom dunst rofi neovim zsh fastfetch wezterm openrgb yazi feh curl wget maim satty xclip xcolor
 
 # Setup shell
 # TODO: disable interactif

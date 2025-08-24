@@ -29,33 +29,6 @@ static const char selbgcolor[]                 = "#52494E";
 static const char selbordercolor[]             = "#52494E";
 static const char selfloatcolor[]              = "#52494E";
 
-/*
- M = {
-	none = Color.none(),
-	fg = Color.new(0xe4e4e4),
-	["fg+1"] = Color.new(0xf4f4ff),
-	["fg+2"] = Color.new(0xf5f5f5),
-	white = Color.new(0xffffff),
-	black = Color.new(0x000000),
-	["bg-1"] = Color.new(0x101010),
-	bg = Color.new(0x181818),
-	["bg+1"] = Color.new(0x282828),
-	["bg+2"] = Color.new(0x453d41),
-	["bg+3"] = Color.new(0x484848),
-	["bg+4"] = Color.new(0x52494e),
-	["red-1"] = Color.new(0xc73c3f),
-	red = Color.new(0xf43841),
-	["red+1"] = Color.new(0xff4f58),
-	green = Color.new(0x73d936),
-	yellow = Color.new(0xffdd33),
-	brown = Color.new(0xcc8c3c),
-	quartz = Color.new(0x95a99f),
-	["niagara-2"] = Color.new(0x303540),
-	["niagara-1"] = Color.new(0x565f73),
-	niagara = Color.new(0x96a6c8),
-	wisteria = Color.new(0x9e95c7),
-}
- * */
 
 static const char *colors[][3] = {
 	/*                       fg                bg                border        */
@@ -104,18 +77,10 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, NULL };
 
-static const char *dmenucmd[] = {
-	//"dmenu_run",
-	"dmenu_run_desktop",
-	"-m", dmenumon,
-	"-fn", dmenufont,
-	"-nb", normbgcolor,
-	"-nf", normfgcolor,
-	"-sb", selbgcolor,
-	"-sf", selfgcolor,
-	NULL
-};
+
+
 static const char *roficmd[] = {
 	"rofi",
 	"-show", 
@@ -132,6 +97,11 @@ static const char *mutecmd[]   = { "pactl", "set-sink-mute",   "@DEFAULT_SINK@",
 static const char *volupcmd[]  = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%",    NULL };
 static const char *voldowncmd[] = { "pactl","set-sink-volume", "@DEFAULT_SINK@", "-5%",    NULL };
 
+
+//static const char *screenshotcmd[] = {"maim", "-s", "|", "xclip", "-selection", "clipboard", "-t", "image/png", "&&", "xclip", "-selection", "clipboard", "-out", "|", "satty", "--filename", "-", "--output-filename", "~/Images/screenshot-%Y-%m-%d_%H:%M:%S.png"    };
+static const char screenshotcmd[] = "maim -s | xclip -selection clipboard -t image/png && xclip -selection clipboard -out | satty --copy-command 'xclip -selection clipboard -t image/png' --filename - --output-filename ~/Images/screenshot-%Y-%m-%d_%H:%M:%S.png";
+static const char colorpickercmd[] = "xcolor | xclip -selection clipboard";
+
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
     //{ 0,                            XF86XK_MonBrightnessUp,    spawn, {.v = brupcmd} },
@@ -139,6 +109,8 @@ static const Key keys[] = {
     { 0,                            XF86XK_AudioMute,          spawn, {.v = mutecmd } },
     { 0,                            XF86XK_AudioLowerVolume,   spawn, {.v = voldowncmd } },
     { 0,                            XF86XK_AudioRaiseVolume,   spawn, {.v = volupcmd } },
+	{ MODKEY,                       XK_c, 	   spawn,          SHCMD(colorpickercmd) },
+	{ MODKEY,                       XK_s, 	   spawn,          SHCMD(screenshotcmd) },
 	{ MODKEY|ShiftMask,             XK_l, 	   spawn,          {.v = slockcmd } },
 	{ MODKEY,                       XK_z, 	   spawn,          {.v = boomercmd } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = roficmd } },
