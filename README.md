@@ -1,5 +1,10 @@
 # LINUX DOTFILES
 
+![showcase1](showcase1.png)
+
+![showcase2](showcase2.png)
+
+
 ## Components 
 
 | Component                 | Name |
