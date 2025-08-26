@@ -19,7 +19,7 @@
 | Notifications Daemon      | DUNST |
 | Terminal Emulator         | WEZTERM |
 | Shell                     | ZSH + OH MY ZSH - LAMBDA |
-| Color Theme               | GRUBER-DARCKER |
+| Color Theme               | GRUBER-DARKER |
 | Font                      | IOSEVKA NERD FONT |
 | Editor                    | NEOVIM |
 | System Information Tool   | FASTFETCH + FASTCAT - PENTAGRAM |
